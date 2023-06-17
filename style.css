@@ -39,7 +39,7 @@ main {
     text-align: center;
     height: 600px;
     background: white;
-    background-image: url("/mi solucion/imagenes/muneco.png");
+    background-image: url("./imagenes/muneco.png");
     background-repeat: no-repeat;
     background-position: center;
     border-color: #0a3871;

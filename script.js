@@ -31,6 +31,8 @@ function encriptar (stringEncriptado){
     let matrizCodigo = [["e","enter"], ["i","imes"], ["a","ai"], ["o","ober"], ["u","ufat"]];
     stringEncriptado = stringEncriptado.toLowerCase()
     stringEncriptado = stringEncriptado.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+    stringEncriptado = stringEncriptado.replace(/[^a-zA-Z ]/g, "")
+    
     
 
     for(let i=0; i<matrizCodigo.length; i++){
@@ -46,7 +48,7 @@ function desencriptar (stringDesencriptado){
     let matrizCodigo = [["e","enter"], ["i","imes"], ["a","ai"], ["o","ober"], ["u","ufat"]];
     stringDesencriptado = stringDesencriptado.toLowerCase()
     stringDesencriptado = stringDesencriptado.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-    
+    stringDesencriptado = stringDesencriptado.replace(/[^a-zA-Z ]/g, "")
 
     for(let i=0; i<matrizCodigo.length; i++){
         if(stringDesencriptado.includes(matrizCodigo[i][1])) {
